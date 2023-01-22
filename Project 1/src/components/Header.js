@@ -6,6 +6,7 @@ const HeaderContent = styled.div`
   align-items: center; */
   height: 15vh;
   font-size: 2rem;
+  padding-top: 40px;
   text-align: center;
   /* color: ${(props) => props.theme.title};
   background-color: ${(props) => props.theme.body}; */
