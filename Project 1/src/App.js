@@ -11,6 +11,7 @@ import { ThemeProvider } from "styled-components";
 import styled from "styled-components";
 import { useState } from "react";
 import Button from "./components/Button";
+import { useEffect } from "react";
 
 const StyledApp = styled.div`
   color: ${(props) => props.theme.primary};
@@ -30,10 +31,22 @@ const darkTheme = {
 function App() {
   const [theme, setTheme] = useState(true);
   const [data, setData] = useState(UsersData);
+  const [searchInput, setSearchInput] = useState("");
+  const [filteredData, setFilteredData] = useState(UsersData);
 
   const handleDelete = (id) => {
     setData(data.filter((e) => e.id !== id));
   };
+
+  useEffect(() => {
+    return () => {
+      setFilteredData(
+        data.filter((e) =>
+          e.name.toLowerCase().includes(searchInput.toLowerCase())
+        )
+      );
+    };
+  }, [searchInput, data]);
 
   return (
     <ThemeProvider theme={theme ? lightTheme : darkTheme}>
@@ -48,8 +61,12 @@ function App() {
           <StyledMiddleContainer>
             <Sidebar menuItems={MenuItems}></Sidebar>
             <Content>
-              <>{data.length === 0 && <p>Users list empty!</p>}</>
-              <Users users={data} handleDelete={handleDelete}></Users>
+              <>{filteredData.length === 0 && <p>Users list empty!</p>}</>
+              <Users
+                users={filteredData}
+                handleDelete={handleDelete}
+                handleSearch={setSearchInput}
+              ></Users>
             </Content>
           </StyledMiddleContainer>
           <Footer text="&copy; 2023 Copyright: Agnieszka Szczepańska"></Footer>

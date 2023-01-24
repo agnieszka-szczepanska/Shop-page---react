@@ -3,6 +3,10 @@ import User from "./User";
 function Users(props) {
   return (
     <div>
+      <input
+        onChange={(e) => props.handleSearch(e.target.value)}
+        placeholder="Search User name"
+      ></input>
       {props.users.map((a) => (
         <User
           key={a.id}
