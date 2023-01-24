@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 const SidebarStyled = styled.div`
-  height: 70vh;
-  font-size: 2rem;
+  height: 60vh;
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
+  padding: 40px 20px;
 
-  /* color: ${(props) => props.theme.title};
-  background-color: ${(props) => props.theme.body}; */
+  color: ${(props) => props.theme.primary};
+  background-color: ${(props) => props.theme.secondary};
 `;
 
 export function Sidebar(props) {

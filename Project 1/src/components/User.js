@@ -1,8 +1,18 @@
+import styled from "styled-components";
+
+const UserStyled = styled.div`
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+`;
+
 function User(props) {
   return (
-    <div>
-      {props.name} {props.email}
-    </div>
+    <UserStyled>
+      <span>name: {props.name} </span>
+      <span>email: {props.email}</span>
+    </UserStyled>
   );
 }
 

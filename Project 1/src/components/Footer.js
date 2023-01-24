@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 const FooterStyled = styled.div`
-  font-size: 1rem;
+  font-size: 0.8rem;
   height: 15vh;
   text-align: center;
-  /* color: ${(props) => props.theme.title};
-  background-color: ${(props) => props.theme.body}; */
+  color: ${(props) => props.theme.primary};
+  background-color: ${(props) => props.theme.secondary};
 `;
 
-function Footer() {
-  return <FooterStyled>Footer</FooterStyled>;
+function Footer(props) {
+  return <FooterStyled>{props.text}</FooterStyled>;
 }
 
 export default Footer;

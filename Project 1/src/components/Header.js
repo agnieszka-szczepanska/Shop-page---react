@@ -1,19 +1,28 @@
 import styled from "styled-components";
 
 const HeaderContent = styled.div`
-  /* display: flex;
+  display: flex;
   justify-content: space-between;
-  align-items: center; */
+  align-items: center;
   height: 15vh;
   font-size: 2rem;
-  padding-top: 40px;
-  text-align: center;
-  /* color: ${(props) => props.theme.title};
-  background-color: ${(props) => props.theme.body}; */
+  padding: 20px;
+
+  color: ${(props) => props.theme.third};
+  background-color: ${(props) => props.theme.secondary};
+  img {
+    width: 200px;
+  }
 `;
 
-function Header() {
-  return <HeaderContent>Header</HeaderContent>;
+function Header(props) {
+  return (
+    <HeaderContent>
+      <img src={props.logoSrc} />
+      {props.title}
+      {props.children}
+    </HeaderContent>
+  );
 }
 
 export default Header;
