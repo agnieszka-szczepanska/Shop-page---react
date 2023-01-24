@@ -29,6 +29,11 @@ const darkTheme = {
 
 function App() {
   const [theme, setTheme] = useState(true);
+  const [data, setData] = useState(UsersData);
+
+  const handleDelete = (id) => {
+    setData(data.filter((e) => e.id !== id));
+  };
 
   return (
     <ThemeProvider theme={theme ? lightTheme : darkTheme}>
@@ -43,7 +48,8 @@ function App() {
           <StyledMiddleContainer>
             <Sidebar menuItems={MenuItems}></Sidebar>
             <Content>
-              <Users users={UsersData}></Users>
+              <>{data.length === 0 && <p>Users list empty!</p>}</>
+              <Users users={data} handleDelete={handleDelete}></Users>
             </Content>
           </StyledMiddleContainer>
           <Footer text="&copy; 2023 Copyright: Agnieszka Szczepańska"></Footer>
