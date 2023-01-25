@@ -1,21 +1,26 @@
-.app {
-  display: flex;
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 .home.element {
   display: flex;
+  margin: 20px;
 }
 
 .item-container {
   display: flex;
-  margin-bottom: 10px;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-left: 5%;
   max-width: 50%;
 }
 
 .item-image {
-  max-width: 100px;
+  width: 100px;
+  max-height: 80px;
 }
 
 .item-title {
@@ -24,4 +29,33 @@
 
 .item-description {
   font-size: 0.8rem;
+}
+
+.shoppingCart {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 30px;
+}
+.addToShopping {
+  padding: 0 10px;
+}
+.headingShopping {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  color: rgb(31, 100, 35);
+}
+.loginForm {
+  text-align: center;
+  color: rgb(31, 100, 35);
+  text-shadow: 0px 0px 2px gray;
+}
+.loginForm h1 {
+  margin: 20px 0px;
+}
+.loginForm button {
+  padding: 0px 20px;
 }

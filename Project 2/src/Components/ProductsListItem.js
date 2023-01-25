@@ -9,7 +9,7 @@ function ProductsListItem(props) {
         <div className="item-description">{props.description}</div>
         <div className="item-price">{props.price} $</div>
         <button onClick={() => props.addToShopping(props.price)}>
-          Dodaj do koszyka
+          Add to shopping cart
         </button>
       </div>
     </div>

@@ -9,10 +9,15 @@ function ShoppingCart({ shoppingCart }) {
   };
 
   return (
-    <div>
-      Price
-      <p>{shoppingCart}$</p>
-      <button onClick={() => handleLogOut()}>Log out</button>
+    <div className="headingShopping">
+      <h1>Welcome to my e-shop page</h1>
+      <div className="shoppingCart">
+        Price:
+        <p>{shoppingCart}$</p>
+        <button className="addToShopping" onClick={() => handleLogOut()}>
+          Log out
+        </button>
+      </div>
     </div>
   );
 }

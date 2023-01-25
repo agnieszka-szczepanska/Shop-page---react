@@ -12,7 +12,8 @@ function Login() {
   };
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
+    <form className="loginForm" onSubmit={(e) => handleSubmit(e)}>
+      <h1>Welcome to my e-shop page</h1>
       <input
         type="text"
         name="login"
