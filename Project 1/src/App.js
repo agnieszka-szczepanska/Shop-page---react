@@ -16,6 +16,13 @@ import { useEffect } from "react";
 const StyledApp = styled.div`
   color: ${(props) => props.theme.primary};
   background-color: ${(props) => props.theme.secondary};
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+  }
 `;
 const lightTheme = {
   primary: "#1c1c1c",

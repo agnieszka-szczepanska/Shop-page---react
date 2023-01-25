@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  font-family: "Dosis", sans-serif;
+}
+.inputStyle {
+  margin: 0 25px 0 15px;
+  display: block;
+}

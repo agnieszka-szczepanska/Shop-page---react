@@ -4,10 +4,10 @@ const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 15vh;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 20px;
-
   color: ${(props) => props.theme.third};
   background-color: ${(props) => props.theme.secondary};
   img {

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const FooterStyled = styled.div`
   font-size: 0.8rem;
-  height: 15vh;
+  padding-bottom: 50px;
   text-align: center;
   color: ${(props) => props.theme.primary};
   background-color: ${(props) => props.theme.secondary};

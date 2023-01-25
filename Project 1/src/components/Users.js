@@ -4,6 +4,7 @@ function Users(props) {
   return (
     <div>
       <input
+        className="inputStyle"
         onChange={(e) => props.handleSearch(e.target.value)}
         placeholder="Search User name"
       ></input>
